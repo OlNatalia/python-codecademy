@@ -19,7 +19,7 @@ In Python, we can create a variable called heights to store these integers into 
 heights = [61, 70, 67, 64]
 ```
 
-Notice that:
+:memo: Notice that:
 
     A list begins and ends with square brackets ([ and ]).
 
