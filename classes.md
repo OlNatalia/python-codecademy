@@ -6,7 +6,7 @@
 
 Python equips us with **many different ways to store data**. 
 
-A float is a different kind of number from an int, and we store different data in a list than we do in a dict.    These are known as different types.   
+A float is a different kind of number from an int, and we store different data in a list than we do in a dict. These are known as different types.   
 
 We can **check the type** of a Python variable using the **`type()`** function.
 
@@ -166,7 +166,7 @@ class Grade:
 
 ## Methods
 
-Methods are functions that are defined as part of a class. The first argument in a method is always the object that is calling the method.    
+Methods are functions that are defined as part of a class. The first argument in a method is always the object that is calling the method (the instance of the object itself).    
 Convention recommends that we name this **first argument `self`**. 
 
 Methods always have at least this one argument.

@@ -8,7 +8,9 @@ A module is a collection of Python declarations intended broadly to be used as a
 
 Usually, to use a module in a file, the basic syntax you need at the top of that file is:
 
+```py
 from module_name import object_name
+```
 
 Often, a library will include a lot of code that you don’t need that may slow down your program or conflict with existing code. Because of this, it makes sense to only import what you need.
 

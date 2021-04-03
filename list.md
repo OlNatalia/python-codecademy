@@ -1,57 +1,64 @@
-﻿# Python List
+﻿# Python Lists
 
 ## Introduction to Lists
 
-In programming, it is common to want to work with collections of data.  
-In Python, a **list is one of the many built-in data structures that allows us to work with a collection of data in sequential order**.
+What is a List?
+
+In programming, it is common to want to work with collections of data. In Python, a **list is one of the many built-in data structures that allows us to work with a collection of data in sequential order**.
 
 Suppose we want to make a list of the heights of students in a class:
 
-- Noelle is 61 inches tall
-- Ava is 70 inches tall
-- Sam is 67 inches tall
-- Mia is 64 inches tall
+    Noelle is 61 inches tall
+    Ava is 70 inches tall
+    Sam is 67 inches tall
+    Mia is 64 inches tall
 
 In Python, we can create a variable called heights to store these integers into a list:
 
-```
+```py
 heights = [61, 70, 67, 64]
 ```
 
-:memo: Notice that:
+Notice that:
 
-- A list begins and ends with square brackets ([ and ]).
-- Each item (i.e., 67 or 70) is separated by a comma (,)
-- It’s considered good practice to insert a space () after each comma, but your code will run just fine if you forget the space.
+    A list begins and ends with square brackets ([ and ]).
+
+    Each item (i.e., 67 or 70) is separated by a comma (,)
+
+    It’s considered good practice to insert a space () after each comma, but your code will run just fine if you forget the space.
 
 Let’s write our own list!
 
-### Instructions
+### Exercise Instructions
 
-1. Examine the existing list heights in your code editor.   
+1.
+
+Examine the existing list heights in your code editor.
+
 A new student just joined the class!
-- Chloe is 65 inches tall       
+
+    Chloe is 65 inches tall
+
 Add Chloe’s height to the end of the list heights.
 
-2. Remove the # in front of the definition of the list broken_heights. If you run this code, you’ll get an error in your terminal:
+2.
+
+Remove the # in front of the definition of the list broken_heights. If you run this code, you’ll get an error in your terminal:
 
 ```
 SyntaxError: invalid syntax
-```
 
 Add commas (,) to broken_heights so that it runs without errors.
 
-```
 heights = [61, 70, 67, 64, 65]
 
 broken_heights = [65, 71, 59, 62]
 ```
 
----
 
 What can a List contain?
 
-**Lists can contain more than just numbers.**
+Lists can contain more than just numbers.
 
 Let’s revisit our classroom example with heights:
 
@@ -62,29 +69,35 @@ Let’s revisit our classroom example with heights:
 
 Instead of storing each student’s height, we can make a list that contains their names:
 
-```
+```py
 names = ["Noelle", "Ava", "Sam", "Mia"]
 ```
 
 We can even combine multiple data types in one list. For example, this list contains both a string and an integer:
 
-```
+```py
 mixed_list_string_number = ["Noelle", 61]
 ```
 
 Lists can contain any data type in Python! For example, this list contains a string, integer, boolean, and float.
 
-```
+```py
 mixed_list_common = ["Mia", 27, False, 0.5]
 ```
 
 Let’s experiment with different data types in our own lists!
 
+https://discuss.codecademy.com/c/get-help/1801
+
 ### Instructions
 
-1. Add any additional string to the end of the list ints_and_strings.
+1.
 
-2. Create a new list called sam_height_and_testscore that contains:
+Add any additional string to the end of the list ints_and_strings.
+
+2.
+
+Create a new list called sam_height_and_testscore that contains:
 
     The string "Sam" (to represent sam’s name)
     The number 67 (to represent sam’s average grade)
@@ -93,10 +106,11 @@ Let’s experiment with different data types in our own lists!
 
 Make sure to write the elements in exact order.
 
-```
+```py
 ints_and_strings = [1, 2, 3, "four", "five", "ok"]
 sam_height_and_testscore = ["Sam", 67, 85.5, True]
 ```
+
 ---
 
 ## Empty Lists
@@ -111,6 +125,21 @@ Why would we create an empty list?
 
 Usually, it’s because we’re planning on filling it up later based on some other input. We’ll talk about two ways of filling up a list in the next exercise.
 
+Let’s practice writing an empty list!
+
+### Instructions
+
+1.
+
+Create an empty list and call it my_empty_list. Don’t put anything in the list just yet.
+
+Remember that a list begins and ends with square brackets ([ and ]) and does not have to contain any elements.
+
+```py
+my_empty_list = []
+```
+
+---
 
 ## List Methods
 
@@ -128,15 +157,14 @@ append_example.append('list')
  
 print(append_example)
 
-# Will output:
-
+# output:
 ['This', 'is', 'an', 'example', 'list']
 ```
 
-We will be exploring `.append()` and many other methods in the upcoming exercises but for now take a second to examine the graphic that lists a few common methods that exist in Python for lists.
+We will be exploring .append() and many other methods in the upcoming exercises but for now take a second to examine the graphic that lists a few common methods that exist in Python for lists.
 Instructions
 
-We will be exploring `.append()` and many other methods in the upcoming exercises but for now take a second to examine and play around with the code for two common list methods.
+We will be exploring .append() and many other methods in the upcoming exercises but for now take a second to examine and play around with the code for two common list methods.
 
 ```py
 example_list = [1, 2, 3, 4]
@@ -150,23 +178,25 @@ example_list.remove(5)
 # print(example_list)
 ```
 
-Growing a List: Append
 
-We can add a single element to a list using the `.append()` Python method.
+## Growing a List: Append
 
-Suppose we have an empty list called garden and we can add the element "Tomatoes" by using the `.append()` method:
+We can add a single element to a list using the .append() Python method.
+
+Suppose we have an empty list called garden:
 
 ```py
 garden = []
-
 garden.append("Tomatoes")
+ 
 print(garden)
-
-# Will output:
+# output:
 ['Tomatoes']
 ```
 
-When we use `.append()` on a list that already has elements, our new element is added to the end of the list:
+We see that garden now contains "Tomatoes"!
+
+When we use .append() on a list that already has elements, our new element is added to the end of the list:
 
 ```py
 # Create a list
@@ -176,7 +206,7 @@ garden = ["Tomatoes", "Grapes", "Cauliflower"]
 garden.append("Green Beans")
 print(garden)
 
-# Will output:
+# output:
 ['Tomatoes', 'Grapes', 'Cauliflower', 'Green Beans']
 ```
 
@@ -184,39 +214,47 @@ Let’s use the .append() method to manipulate a list.
 
 ### Instructions
 
-1. Jiho works for a gardening store called Petal Power. Jiho keeps a record of orders in a list called orders.      
+1.
+
+Jiho works for a gardening store called Petal Power. Jiho keeps a record of orders in a list called orders.
+
 Use print to inspect the orders he has received today.
 
-2. Jiho just received a new order for "tulips". Use append to add this string to orders.
+2.
 
-3. Another order has come in! Use append to add "roses" to orders.
+Jiho just received a new order for "tulips". Use append to add this string to orders.
 
-4. Use print to inspect the orders Jiho has received today.
+3.
 
+Another order has come in! Use append to add "roses" to orders.
+
+4.
+
+Use print to inspect the orders Jiho has received today.
+
+```py
 orders = ["daisies", "periwinkle"]
 print(orders)
 orders.append("tulips")
 orders.append("roses")
 print(orders)
+```
 
-
-Growing a List: Plus (+)
+## Growing a List: Plus (+)
 
 When we want to add multiple items to a list, we can use + to combine two lists (this is also known as concatenation).
 
 Below, we have a list of items sold at a bakery called items_sold:
 
-```
+```py
 items_sold = ["cake", "cookie", "bread"]
-```
 
 Suppose the bakery wants to start selling "biscuit" and "tart":
 
-```py
 items_sold_new = items_sold + ["biscuit", "tart"]
 print(items_sold_new)
 
-# Would output:
+# output:
 ['cake', 'cookie', 'bread', 'biscuit', 'tart']
 ```
 
@@ -225,39 +263,51 @@ In this example, we created a new variable, items_sold_new, which contained both
 ```py
 print(items_sold)
 
-# Would output:
+# output:
 ['cake', 'cookie', 'bread']
 ```
 
 We can only use + with other lists. If we type in this code:
 
+:x:
+
 ```py
 my_list = [1, 2, 3]
 my_list + 4
-```
 
-:x: we will get the following error:
+# we will get the following error:
 
-```
 TypeError: can only concatenate list (not "int") to list
 ```
 
-If we want to add a single element using `+`, we have to put it into a list with brackets (`[]`):
+If we want to add a single element using +, we have to put it into a list with brackets ([]):
+
+:white_check_mark:
 
 ```py
 my_list + [4]
 ```
 
+<br>
+
 Let’s use + to practice combining two lists!
 
 ### Instructions
 
-1. Jiho is updating a list of orders. He just received orders for "lilac" and "iris".   
+1.
+
+Jiho is updating a list of orders. He just received orders for "lilac" and "iris".
+
 Create a list called new_orders that contains our new orders.
 
-2. Use + to create a new list called orders_combined that combines orders with new_orders.
+2.
 
-3. Remove the # and whitespace in front of the list broken_prices. If you run this code, you’ll get an error:
+Use + to create a new list called orders_combined that combines orders with new_orders.
+
+3.
+
+Remove the # and whitespace in front of the list broken_prices. If you run this code, you’ll get an error:
+
 ```
 TypeError: can only concatenate list (not "int") to list
 ```
@@ -274,7 +324,7 @@ orders_combined  = orders + new_orders
 broken_prices = [5, 3, 4, 5, 4] + [4]
 ```
 
----
+<br>
 
 ## Accessing List Elements
 
@@ -291,12 +341,13 @@ In Python, we call the location of an element in a list its index.
 Python lists are zero-indexed. This means that the first element in a list has index 0, rather than 1.
 
 Here are the index numbers for the list calls:
-Element 	Index
-"Juan" 	0
-"Zofia" 	1
-"Amare" 	2
-"Ezio" 	3
-"Ananya" 	4
+
+    Element 	Index
+    "Juan" 	0
+    "Zofia" 	1
+    "Amare" 	2
+    "Ezio" 	3
+    "Ananya" 	4
 
 In this example, the element with index 2 is "Amare".
 
@@ -304,26 +355,32 @@ We can select a single element from a list by using square brackets ([]) and the
 
 ```py
 print(calls[2])
-
 # Will output:
 Amare
 ```
 
-:memo: Note: When accessing elements of an array, you must use an int as the index. If you use a float, you will get an error. This can be especially tricky when using division. For example print(calls[4/2]) will result in an error, because 4/2 gets evaluated to the float 2.0.
+Note: When accessing elements of an array, you must use an int as the index. If you use a float, you will get an error. This can be especially tricky when using division. For example print(calls[4/2]) will result in an error, because 4/2 gets evaluated to the float 2.0.
 
 To solve this problem, you can force the result of your division to be an int by using the int() function. int() takes a number and cuts off the decimal point. For example, int(5.9) and int(5.0) will both become 5. Therefore, calls[int(4/2)] will result in the same value as calls[2], whereas calls[4/2] will result in an error.
 
-Instructions
+### Instructions
 
-1. Use square brackets ([ and ]) to select the 4th employee from the list employees. Save it to the variable employee_four.
+1.
 
-2. Paste the following code into script.py:
-```
+Use square brackets ([ and ]) to select the 4th employee from the list employees. Save it to the variable employee_four.
+
+2.
+
+Paste the following code into script.py:
+```py
 print(employees[8])
 ```
+
 What happens? Why?
 
-3. Selecting an element that does not exist produces an IndexError.
+3.
+
+Selecting an element that does not exist produces an IndexError.
 
 In the line of code that you pasted, change 8 to an index that exists so that you don’t get an IndexError.
 
@@ -335,9 +392,7 @@ employee_four = employees[3]
 print(employees[0])
 ```
 
-<br>
-
-### Accessing List Elements: Negative Index
+## Accessing List Elements: Negative Index
 
 What if we want to select the last element of a list?
 
@@ -353,8 +408,7 @@ If we select the -1 index, we get the final element, "love".
 
 ```py
 print(pancake_recipe[-1])
-
-# Would output:
+# output:
 love
 ```
 
@@ -362,46 +416,50 @@ This is equivalent to selecting the element with index 5:
 
 ```py
 print(pancake_recipe[5])
-
-# Would output:
+# output:
 love
 ```
 
 Here are the negative index numbers for our list:
 
-Element 	Index
-"eggs" 	-6
-"flour" 	-5
-"butter" 	-4
-"milk" 	-3
-"sugar" 	-2
-"love" 	-1
+    Element 	Index
+    "eggs" 	-6
+    "flour" 	-5
+    "butter" 	-4
+    "milk" 	-3
+    "sugar" 	-2
+    "love" 	-1
 
 ### Instructions
 
-1. Create a called variable last_element.
+1.
+
+Create a called variable last_element.
 
 Assign the last element in shopping_list to the variable last_element using a negative index.
 
-2. Now select the element with index 5 and save it to the variable index5_element.
+2.
 
-3. Use print to display both element5 and last_element.     
-Note that they are equal to "cereal"!
+Now select the element with index 5 and save it to the variable index5_element.
+
+3.
+
+Use print to display both element5 and last_element.
 
 ```py
+Note that they are equal to "cereal"!
+
 shopping_list = ["eggs", "butter", "milk", "cucumbers", "juice", "cereal"]
 last_element = shopping_list[-1]
 index5_element = shopping_list[5]
 print(last_element, index5_element)
 ```
 
---- 
-
 ## Modifying List Elements
 
 Let’s return to our garden.
 
-```
+```py
 garden = ["Tomatoes", "Green Beans", "Cauliflower", "Grapes"]
 ```
 
@@ -414,8 +472,7 @@ We will need to modify the list to accommodate the change to our garden list. To
 ```py
 garden[2] = "Strawberries"
 print(garden)
-
-# Will output:
+# output:
 ["Tomatoes", "Green Beans", "Strawberries", "Grapes"]
 ```
 
@@ -424,26 +481,31 @@ Negative indices will work as well.
 ```py
 garden[-1] = "Raspberries"
 print(garden)
-
-# Will output:
+# output:
 ["Tomatoes", "Green Beans", "Strawberries", "Raspberries"]
 ```
 
 ### Instructions
 
-1. We have decided to start selling some of our garden produce. Word around our town has spread and people are interested in getting some of our delicious vegetables and fruit.
+1.
+
+We have decided to start selling some of our garden produce. Word around our town has spread and people are interested in getting some of our delicious vegetables and fruit.
 
 We decided to create a waitlist to make sure we can sell to all of our new customers!
 
 Define a list called garden_waitlist and set the value to contain our customers (in order): "Jiho", "Adam", "Sonny", and "Alisha".
 
-2. "Adam" decided his fridge is too full at the moment and asked us to remove him from the waitlist and make space for one of our other townsfolk.
+2.
+
+"Adam" decided his fridge is too full at the moment and asked us to remove him from the waitlist and make space for one of our other townsfolk.
 
 Replace "Adam" with our other interested customer "Calla" using the index method we used in the narrative.
 
 Print garden_waitlist to see the change!
 
-3. Alisha realized she was already stocked with all the items we are selling. She asked us to replace her with her friend Alex who just ran out.
+3.
+
+Alisha realized she was already stocked with all the items we are selling. She asked us to replace her with her friend Alex who just ran out.
 
 Replace Alisha with Alex using a negative index.
 
@@ -457,7 +519,7 @@ garden_waitlist [-1] = "Alex"
 print(garden_waitlist )
 ```
 
----
+<br>
 
 ## Shrinking a List: Remove
 
@@ -474,11 +536,7 @@ We could remove "Chris" by using the .remove() method:
 ```py
 shopping_line.remove("Chris")
 print(shopping_line)
-```
-
-If we examine shopping_line, we can see that it now doesn’t contain "Chris":
-
-```
+# If we examine shopping_line, we can see that it now doesn’t contain "Chris":
 ["Cole", "Kip", "Sylvana"]
 ```
 
@@ -493,8 +551,7 @@ shopping_line = ["Cole", "Kip", "Chris", "Sylvana", "Chris"]
 # Remove a element
 shopping_line.remove("Chris")
 print(shopping_line)
-
-# Will output:
+# output:
 ["Cole", "Kip", "Sylvana", "Chris"]
 ```
 
@@ -502,29 +559,39 @@ Let’s practice using the .remove() method to remove elements from a list.
 
 ### Instructions
 
-1. We have decided to get into the grocery store business. Our manager Calla has decided to store all the inventory purchases in a list to help track what products need to be ordered.
+1.
+
+We have decided to get into the grocery store business. Our manager Calla has decided to store all the inventory purchases in a list to help track what products need to be ordered.
 
 Let’s create a list called order_list with the following values (in this particular order):
 
+```py
 "Celery", "Orange Juice", "Orange", "Flatbread"
+```
 
 Print order_list to see the current list.
 
-2. We are in luck! We actually found a spare case of "Flatbread" in our back storage. We won’t need to order it anymore. Let’s remove it from order_list using the .remove() method.
+2.
+
+We are in luck! We actually found a spare case of "Flatbread" in our back storage. We won’t need to order it anymore. Let’s remove it from order_list using the .remove() method.
 
 Print order_list to see the current list.
 
-3. Our store has grown to be a huge success! We decided to open a second store and require a new order list. Calla has done us the favor of putting one together.
+3.
+
+Our store has grown to be a huge success! We decided to open a second store and require a new order list. Calla has done us the favor of putting one together.
 
 Create a new list called new_store_order_list and assign it the following values (in order):
 
 "Orange", "Apple", "Mango", "Broccoli", "Mango"
 
-:memo: Note: Our second store is going to need two orders of mangos so the value is duplicated.
+Note: Our second store is going to need two orders of mangos so the value is duplicated.
 
 Print new_store_order_list to see the current list.
 
-4. We are in luck again! We actually found a spare case of "Mango" in our back storage.
+4.
+
+We are in luck again! We actually found a spare case of "Mango" in our back storage.
 
 We won’t be needing to place two orders anymore.
 
@@ -532,7 +599,9 @@ Let’s remove it from new_store_order_list using the .remove() method.
 
 Print new_store_order_list to see the current list.
 
-5. Calla ran to tell us some important news! She asked us to remove "Onions" from our new new_store_order_list. If we double-check our list, we will notice we don’t have "Onions" on our list.
+5.
+
+Calla ran to tell us some important news! She asked us to remove "Onions" from our new new_store_order_list. If we double-check our list, we will notice we don’t have "Onions" on our list.
 
 Let’s see what happens when we try to remove an item that does not exist.
 
@@ -551,6 +620,8 @@ print(new_store_order_list)
 # new_store_order_list.remove("Onions")
 ```
 
+<br>
+
 ---
 
 ## Two-Dimensional (2D) Lists
@@ -566,13 +637,15 @@ Once more, let’s look at a class height example:
 
 Previously, we saw that we could create a list representing both Noelle’s name and height:
 
-```
+```py
 noelle = ["Noelle", 61]
 ```
 
 We can put several of these lists into one list, such that each entry in the list represents a student and their height:
 
+```py
 heights = [["Noelle", 61], ["Ava", 70], ["Sam", 67], ["Mia", 64]]
+```
 
 We will often find that a two-dimensional list is a very good structure for representing grids such as games like tic-tac-toe.
 
@@ -590,9 +663,13 @@ Let’s practice creating our own 2D list!
 
 ### Instructions
 
-1. A new student named "Vik" has joined our class. Vik is 68 inches tall. Add a sublist to the end of the heights list that represents Vik and his height.
+1.
 
-2. Create a two-dimensional list called ages where each sublist contains a student’s name and their age. Use the following data:
+A new student named "Vik" has joined our class. Vik is 68 inches tall. Add a sublist to the end of the heights list that represents Vik and his height.
+
+2.
+
+Create a two-dimensional list called ages where each sublist contains a student’s name and their age. Use the following data:
 
     "Aaron" is 15
     "Dhruti" is 16
@@ -602,7 +679,7 @@ heights = [["Jenny", 61], ["Alexus", 70], ["Sam", 67], ["Grace", 64], ["Vik", 68
 ages = [["Aaron", 15], ["Dhruti", 16]]
 ```
 
-### Accessing 2D Lists
+## Accessing 2D Lists
 
 Let’s return to our classroom heights example:
 
@@ -614,47 +691,53 @@ Two-dimensional lists can be accessed similar to their one-dimensional counterpa
 
 If we wanted to access "Noelle"‘s height:
 
-Access the sublist at index 0, and then access the 1st index of that sublist. 
-
 ```py
+#Access the sublist at index 0, and then access the 1st index of that sublist. 
 noelles_height = heights[0][1] 
 print(noelles_height)
-
-# Would output:
+# output:
 61
 ```
 
 Here are the index numbers to access data for the list heights:
-Element 	Index
-"Noelle" 	heights[0][0]
-61 	heights[0][1]
-"Ali" 	heights[1][0]
-70 	heights[1][1]
-"Sam" 	heights[2][0]
-67 	heights[2][1]
+
+    Element 	Index
+    "Noelle" 	heights[0][0]
+    61 	heights[0][1]
+    "Ali" 	heights[1][0]
+    70 	heights[1][1]
+    "Sam" 	heights[2][0]
+    67 	heights[2][1]
 
 Let’s practice accessing data in a two-dimensional list.
 
 ### Instructions
 
-1. We want to have a way to store all of our classroom test score data.
+1.
+
+We want to have a way to store all of our classroom test score data.
 
 Using the provided table, create a two-dimensional list called class_name_test to represent the data. Each sublist in class_name_test should have one student’s name and their associated score.
-Name 	Test Score
-"Jenny" 	90
-"Alexus" 	85.5
-"Sam" 	83
-"Ellie" 	101.5
+
+    Name 	Test Score
+    "Jenny" 	90
+    "Alexus" 	85.5
+    "Sam" 	83
+    "Ellie" 	101.5
 
 Print class_name_test to see the result.
 
-2. Use double square brackets ([][]) to select Sam‘s test score from the list class_name_test.
+2.
+
+Use double square brackets ([][]) to select Sam‘s test score from the list class_name_test.
 
 Save it to the variable sams_score.
 
 Print the variable sams_score to see the result.
 
-3. Use double square brackets ([][]) to select Ellies test score from the list class_name_test. This time only use negative indices!
+3.
+
+Use double square brackets ([][]) to select Ellies test score from the list class_name_test. This time only use negative indices!
 
 Save it to the variable ellies_score.
 
@@ -671,6 +754,7 @@ print(sams_score)
 ellies_score = class_name_test[-1][-1]
 print(ellies_score)
 ```
+<br>
 
 ## Modifying 2D Lists
 
@@ -691,7 +775,7 @@ We will need to modify the list to accommodate the change to our class_name_hobb
 class_name_hobbies[0][1] = "Meditation"
 print(class_name_hobbies)
 
-# Would output:
+# output:
 [["Jenny", "Meditation"], ["Alexus", "Photography"], ["Grace", "Soccer"]]
 ```
 
@@ -702,29 +786,36 @@ Negative indices will work as well.
 class_name_hobbies[-1][-1] = "Football"
 print(class_name_hobbies)
 
-# Would output:
+# output:
 [["Jenny", "Meditation"], ["Alexus", "Photography"], ["Grace", "Football"]]
 ```
 
 ### Instructions
 
-1. Our school is expanding! We are welcoming a new set of students today from all over the world.
+1.
+
+Our school is expanding! We are welcoming a new set of students today from all over the world.
 
 Using the provided table, create a two-dimensional list called incoming_class to represent the data. Each sublist in incoming_class should contain the name, nationality, and grade for a single student.
-Name 	Nationality 	Grade Level
-"Kenny" 	"American" 	9
-"Tanya" 	"Russian" 	9
-"Madison" 	"Indian" 	7
+
+    Name 	Nationality 	Grade Level
+    "Kenny" 	"American" 	9
+    "Tanya" 	"Russian" 	9
+    "Madison" 	"Indian" 	7
 
 Print incoming_class to see our list.
 
-2. "Madison" passed an exam to advance a grade. She will be pushed into 8th grade rather than her current 7th in our list.
+2.
+
+"Madison" passed an exam to advance a grade. She will be pushed into 8th grade rather than her current 7th in our list.
 
 Modify the list using double brackets [][] to make the change. Use positive inidices.
 
 Print incoming_class to see our change.
 
-3. "Kenny" likes to be called by his nickname "Ken". Modify the list using double brackets [][] to accommodate the change but only using negative indices.
+3.
+
+"Kenny" likes to be called by his nickname "Ken". Modify the list using double brackets [][] to accommodate the change but only using negative indices.
 
 Print incoming_class to see our change.
 
@@ -746,10 +837,10 @@ print(incoming_class)
 
 So far, we have learned:
 
-    How to create a list
-    How to access, add, remove, and modify list elements
-    How to create a two-dimensional list
-    How to access and modify two-dimensional list elements
+- How to create a list
+- How to access, add, remove, and modify list elements
+- How to create a two-dimensional list
+- How to access and modify two-dimensional list elements
 
 To combine two lists using +, define a new variable and set it to the two lists we want to combine with + in between.
 
@@ -761,7 +852,7 @@ Here is an example:
 1_to_5 = 1_to_3 + [4, 5]
 print(1_to_5)
 
-# Would output:
+# output:
 [1, 2, 3, 4, 5]
 ```
 
@@ -778,7 +869,9 @@ Let’s practice these skills.
 
 ### Instructions
 
-1. Maria is entering customer data for her web store business. We’re going to help her organize her data.
+1.
+
+Maria is entering customer data for her web store business. We’re going to help her organize her data.
 
 Start by turning this list of customer first names into a list called first_names. Make sure to enter the names in this order:
 
@@ -787,19 +880,27 @@ Start by turning this list of customer first names into a list called first_name
     Chani
     Depak
 
-2. Maria wants to track all customer’s preferred sizes for her clothing. Create a list called preferred_size.
+2.
+
+Maria wants to track all customer’s preferred sizes for her clothing. Create a list called preferred_size.
 
 Fill our new list preferred_size with the following data, containing the preferred sizes for Ainsley, Ben, and Chani:
 
+```
 ["Small", "Large", "Medium"]
+```
 
-3. On no! We forgot to add Depak’s size.
+3.
+
+On no! We forgot to add Depak’s size.
 
 Depak’s size is "Medium". Use .append() to add "Medium" to the preferred_size list.
 
 Print preferred_size to see our change.
 
-4. Maria is having a hard time visualizing which customer is associated with each size. Let’s restructure our two lists into a two-dimensional list to help Maria.
+4.
+
+Maria is having a hard time visualizing which customer is associated with each size. Let’s restructure our two lists into a two-dimensional list to help Maria.
 
 In addition to our already available data, Maria is adding a third value for each customer that reflects if they want expedited shipping on their orders.
 
@@ -807,25 +908,31 @@ This will be reflected using a boolean value (True for expedited, False for regu
 
 Create a two-dimensional list called customer_data using the following table as a reference for the data. Each sublist should contain a name, size, and expedited shipping option for a single person.
 
-Name 	Size 	Expedited Shipping
-"Ainsley" 	"Small" 	True
-"Ben" 	"Large" 	False
-"Chani" 	"Medium" 	True
-"Depak" 	"Medium" 	False
+    Name 	Size 	Expedited Shipping
+    "Ainsley" 	"Small" 	True
+    "Ben" 	"Large" 	False
+    "Chani" 	"Medium" 	True
+    "Depak" 	"Medium" 	False
 
 Print customer_data to see the data.
 
-5. "Chani" reached out to Maria. She requested to switch to regular shipping to save some money.
+5.
+
+"Chani" reached out to Maria. She requested to switch to regular shipping to save some money.
 
 Change the data value for "Chani"‘s shipping preference to False in our two-dimensional list to reflect the change.
 
-6. "Ben" reached out to Maria asking to remove his shipping option because he is not sure what type he wants.
+6.
+
+"Ben" reached out to Maria asking to remove his shipping option because he is not sure what type he wants.
 
 Use the .remove() method to delete the shipping value from the sublist that contains ben’s data.
 
 Note: We never explicitly went over how to use the .remove() method on a 2d list together. If you feel like you are struggling, take a look at the hint for some guidance.
 
-7. Great job making it this far! One last thing, Maria received a new customer "Amit" and "Karim" that had the following data:
+7.
+
+Great job making it this far! One last thing, Maria received a new customer "Amit" and "Karim" that had the following data:
 
 ```py
 [["Amit", "Large", True], ["Karim", "X-Large", False]]
@@ -863,9 +970,11 @@ customer_data_final = customer_data + [["Amit", "Large", True], ["Karim", "X-Lar
 print(customer_data_final)
 ```
 
+<br>
+
 ---
 
-### Challenge - Gradebook
+### Gradebook
 
 You are a student and you are trying to organize your subjects and grades using Python. Let’s explore what we’ve learned about lists to organize your subjects and scores.
 
@@ -876,74 +985,97 @@ sublist.remove(value)
 
 Your grade for poetry should exist on the sublist gracebook[2]. Call append on this sublist with the value of "Pass"
 
-```py
 sublist.append(value)
 
+```py
 last_semester_gradebook = [("politics", 80), ("latin", 96), ("dance", 97), ("architecture", 65)]
 ```
 
-
 Create Some Lists:
 
-1. Create a list called subjects and fill it with the classes you are taking:
+1.
+
+Create a list called subjects and fill it with the classes you are taking:
 
     "physics"
     "calculus"
     "poetry"
     "history"
 
-2. Create a list called grades and fill it with your scores:
+2.
+
+Create a list called grades and fill it with your scores:
 
     98
     97
     85
     88
 
-3. Create a two-dimensional list to combine subjects and grades. Use the table below as a reference to associated values.
+3.
 
-Name 	Test Score
-"Physics" 	98
-"Calculus" 	97
-"Poetry" 	85
-"History" 	88
+Create a two-dimensional list to combine subjects and grades. Use the table below as a reference to associated values.
+
+    Name 	Test Score
+    "Physics" 	98
+    "Calculus" 	97
+    "Poetry" 	85
+    "History" 	88
 
 Assign the value into a variable called gradebook.
 
-4. Print gradebook.
+4.
+
+Print gradebook.
 
 Does it look how you expected it would?
 Add More Subjects:
 
-5. Your grade for your computer science class just came in! You got a perfect score, 100!
+5.
+
+Your grade for your computer science class just came in! You got a perfect score, 100!
 
 Use the .append() method to add a list with the values of "Computer Science" and an associated grade value of 100 to our two-dimensional list of gradebook.
 
-6. Your grade for visual arts just came in! You got a 93!
+6.
+
+Your grade for visual arts just came in! You got a 93!
 
 Use append to add ["Visual Arts", 93] to gradebook.
 Modify The Gradebook:
 
-7. Our instructor just told us they made a mistake grading and are rewarding an extra 5 points for our visual arts class.
+7.
+
+Our instructor just told us they made a mistake grading and are rewarding an extra 5 points for our visual arts class.
 
 Access the index of the grade for your visual arts class and modify it to be 5 points greater.
 
-8. You decided to switch from a numerical grade value to a Pass/Fail option for your poetry class.
+8.
+
+You decided to switch from a numerical grade value to a Pass/Fail option for your poetry class.
 
 Find the grade value in your gradebook for your poetry class and use the .remove() method to delete it.
 
 Your grade for poetry is an 85 and the value exists at gradebook[2][1]. Use the .remove() method on this sublist and provide the value you want to remove.
 
+```py
 sublist.remove(value)
+```
 
-9. Use the .append() method to then add a new "Pass" value to the sublist where your poetry class is located.
+9.
+
+Use the .append() method to then add a new "Pass" value to the sublist where your poetry class is located.
 
 Your grade for poetry should exist on the sublist gracebook[2]. Call append on this sublist with the value of "Pass"
 
+```py
 sublist.append(value)
+```
 
 One Big Gradebook!
 
-10. You also have your grades from last semester, stored in last_semester_gradebook.
+10.
+
+You also have your grades from last semester, stored in last_semester_gradebook.
 
 Create a new variable full_gradebook that combines both last_semester_gradebook and gradebook using + to have one complete grade book.
 
@@ -1004,7 +1136,7 @@ builtinfuncion(input)
 ```
 
 
-Adding by Index: Insert
+### Adding by Index: Insert
 
 The Python list method .insert() allows us to add an element to a specific index in a list.
 
@@ -1031,11 +1163,11 @@ Here is how we would use the .insert() method to insert "Vikor" :
 store_line.insert(2, "Vikor")
 print(store_line) 
 
-# Would output:
+# output:
  ['Karla', 'Maxium', 'Viktor', 'Martim', 'Isabella']
 ```
 
-Some important things to note:
+:memo: Some important things to note:
 
     The order and number of the inputs is important. The .insert() method expects two inputs, the first being a numerical index, followed by any value as the second input.
 
@@ -1045,7 +1177,9 @@ Let’s practice using .insert()!
 
 ### Instructions
 
-1. We are helping out a popular grocery store called Jiho’s Produce.
+1.
+
+We are helping out a popular grocery store called Jiho’s Produce.
 
 Every week the store has to choose the order in which it displays some of its popular items on sale in the front window to attract customers.
 
@@ -1053,7 +1187,9 @@ Jiho, the store owner, likes to store the items for the display in a list.
 
 Check out the current display list in our code editor. Click Run to print out the list.
 
-2. Jiho found out some great news! "Pineapple" is back in stock.
+2.
+
+Jiho found out some great news! "Pineapple" is back in stock.
 
 Jiho would like to put "Pineapple" in the front of the list so it is the first item customers see in the display window.
 
@@ -1061,7 +1197,7 @@ Use .insert() to add "Pineapple" to the front of the list.
 
 Print the resulting list to see the change.
 
-:memo: Note: For this list, the front will be the element at index 0
+Note: For this list, the front will be the element at index 0
 
 ```py
 front_display_list = ["Mango", "Filet Mignon", "Chocolate Milk"]
@@ -1083,7 +1219,9 @@ The .pop() method takes an optional single input:
 
 To see it in action, let’s consider a list called cs_topics that stores a collection of topics one might study in a computer science program.
 
+```py
 cs_topics = ["Python", "Data Structures", "Balloon Making", "Algorithms", "Clowns 101"]
+```
 
 Two of these topics don’t look like they belong, let’s see how we remove them using .pop().
 
@@ -1094,7 +1232,7 @@ removed_element = cs_topics.pop()
 print(cs_topics)
 print(removed_element)
 
-# Would output:
+# output:
 ['Python', 'Data Structures', 'Balloon Making', 'Algorithms']
 'Clowns 101'
 ```
@@ -1111,7 +1249,7 @@ Lastly let’s remove "Balloon Making":
 cs_topics.pop(2)
 print(cs_topics)
 
-# Would output:
+# output:
 ['Python', 'Data Structures', 'Algorithms']
 ```
 
@@ -1124,7 +1262,7 @@ Note: Passing in an index that does not exist or calling .pop() on an empty list
 
 Let’s apply what we learned about the .pop() method.
 
-Instructions
+### Instructions
 
 1.
 
@@ -1160,6 +1298,8 @@ data_science_topics.pop(3)
 print(data_science_topics )
 ```
 
+<br>
+
 ---
 
 ## Consecutive Lists: Range
@@ -1182,7 +1322,7 @@ So, if we want the numbers from 0 through 9, we use range(10) because 10 is 1 gr
 my_range = range(10)
 print(my_range)
 
-# Would output:
+# output:
 range(0, 10)
 ```
 
@@ -1197,13 +1337,13 @@ We use the list() function on our range object like this:
 ```py
 print(list(my_range))
 
-# Would output:
+# output:
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 Let’s try out using range()!
 
-Instructions
+### Instructions
 
 1.
 
@@ -1231,8 +1371,7 @@ For example, range(2, 9) would generate numbers starting at 2 and ending at 8 (j
 ```py
 my_list = range(2, 9)
 print(list(my_list))
-
-# Would output:
+# output:
 [2, 3, 4, 5, 6, 7, 8]
 ```
 
@@ -1243,8 +1382,7 @@ For example, range(2, 9, 2) will give us a list where each number is 2 greater t
 ```py
 my_range2 = range(2, 9, 2)
 print(list(my_range2))
-
-# Would output:
+# output:
 [2, 4, 6, 8]
 ```
 
@@ -1255,8 +1393,7 @@ For example, we’ll start at 1 and skip in increments of 10 between each number
 ```py
 my_range3 = range(1, 100, 10)
 print(list(my_range3))
-
-# Would output:
+# output:
 [1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
 ```
 
@@ -1264,7 +1401,7 @@ Our list stops at 91 because the next number in the sequence would be 101, which
 
 Let’s experiment with our additional range() inputs!
 
-Instructions
+### Instructions
 
 1.
 
@@ -1287,6 +1424,8 @@ range_five_three = range(5, 15, 3)
 range_diff_five = range(0, 40, 5)
 ```
 
+<br>
+
 ---
 
 ## Length
@@ -1299,29 +1438,39 @@ When we apply len() to a list, we get the number of elements in that list:
 
 ```py
 my_list = [1, 2, 3, 4, 5]
+ 
 print(len(my_list))
-
-# Would output:
+# output:
 5
 ```
 
 Let’s find the length of various lists!
 
-Instructions
+### Instructions
 
-1. Calculate the length of long_list and save it to the variable long_list_len.
+1.
 
-2. Use print() to examine long_list_len.
+Calculate the length of long_list and save it to the variable long_list_len.
 
-3. We have provided a completed range() function for the variable range_list.
+2.
+
+Use print() to examine long_list_len.
+
+3.
+
+We have provided a completed range() function for the variable range_list.
 
 Calculate its length using the function len() and save it to a variable called range_list_length.
 
 Note: Range objects do not need to be converted to lists in order to determine their length
 
-4. Use print() to examine range_list_length.
+4.
 
-5. Change the range() function that generates range_list so that it skips 100 instead of 10 steps between items.
+Use print() to examine range_list_length.
+
+5.
+
+Change the range() function that generates range_list so that it skips 100 instead of 10 steps between items.
 
 How does this change range_list_len?
 
@@ -1338,6 +1487,9 @@ range_list_length = len(range_list)
 print(range_list_length)
 ```
 
+<br>
+
+---
 
 ## Slicing Lists I
 
@@ -1360,7 +1512,7 @@ We can do this using the following syntax: letters[start:end], where:
 sliced_list = letters[1:6]
 print(sliced_list)
 
-# Would output:
+# output:
 ["b", "c", "d", "e", "f"]
 ```
 
@@ -1368,12 +1520,19 @@ Notice that the element at index 6 (which is "g") is not included in our selecti
 
 ### Instructions
 
-1. Use print() to examine the variable beginning.       
+1.
+
+Use print() to examine the variable beginning.
+
 Before hitting Run think about what elements beginning will contain?
 
-2. Modify beginning, so that it selects the first 2 elements of suitcase.
+2.
 
-3. Create a new list called middle that contains the middle two items ( ["pants", "pants"] ) from suitcase.
+Modify beginning, so that it selects the first 2 elements of suitcase.
+
+3.
+
+Create a new list called middle that contains the middle two items ( ["pants", "pants"] ) from suitcase.
 
 Print middle to see the slice!
 
@@ -1413,7 +1572,7 @@ The following code would start slicing from index 0 (omitted) and up to index 3.
 ```py
 print(fruits[:3])
 
-# Would output:
+# output:
 ['apple', 'cherry', 'pineapple']
 ```
 
@@ -1430,7 +1589,7 @@ This code slices from the element at index -2 up to the last index(ommited).
 ```py
 print(fruits[-2:])
 
-# Would output:
+# output:
 ['orange', 'mango']
 ```
 
@@ -1447,18 +1606,23 @@ This example starts counting from the 0 index (omitted) up to the element at ind
 ```py
 print(fruits[:-1])
 
-# Would output:
+# output:
 ['apple', 'cherry', 'pineapple', 'orange']
 ```
 
 Let’s practice some of these extra slicing techniques!
 
-Instructions
+### Instructions
 
-1. Create a new list called last_two_elements containing the final two elements of suitcase.    
+1.
+
+Create a new list called last_two_elements containing the final two elements of suitcase.
+
 Print last_two_elements to see your result.
 
-2. Create a new list called slice_off_last_three containing all but the last three elements.
+2.
+
+Create a new list called slice_off_last_three containing all but the last three elements.
 
 ```py
 suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
@@ -1468,9 +1632,10 @@ last_two_elements = suitcase[-2:]
 print(last_two_elements)
 slice_off_last_three = suitcase[:-3]
 print(slice_off_last_three)
+
 ```
 
----
+<br>
 
 ## Counting in a List
 
@@ -1488,7 +1653,7 @@ If we want to know how many times i appears in this word, we can use the list me
 num_i = letters.count("i")
 print(num_i)
 
-# Would output:
+# output:
 4
 ```
 
@@ -1498,7 +1663,9 @@ We can even use .count() to count element appearances in a two-dimensional list.
 
 Let’s use the list number_collection as an example:
 
+```py
 number_collection = [[100, 200], [100, 200], [475, 29], [34, 34]]
+```
 
 If we wanted to know how often the sublist [100, 200] appears:
 
@@ -1506,7 +1673,7 @@ If we wanted to know how often the sublist [100, 200] appears:
 num_pairs = number_collection.count([100, 200])
 print(num_pairs)
 
-# Would output:
+# output:
 2
 ```
 
@@ -1514,11 +1681,15 @@ Let’s count some list items using the .count() method!
 
 ### Instructions
 
-1. Mrs. Wilson’s class is voting for class president. She has saved each student’s vote into the list votes.
+1.
+
+Mrs. Wilson’s class is voting for class president. She has saved each student’s vote into the list votes.
 
 Use .count() to determine how many students voted for "Jake" and save the value to a variable called jake_votes.
 
-2. Use print() to examine jake_votes.
+2.
+
+Use print() to examine jake_votes.
 
 ```py
 votes = ["Jake", "Jake", "Laurie", "Laurie", "Laurie", "Jake", "Jake", "Jake", "Laurie", "Cassie", "Cassie", "Jake", "Jake", "Cassie", "Laurie", "Cassie", "Jake", "Jake", "Cassie", "Laurie"]
@@ -1528,7 +1699,7 @@ jake_votes = votes.count("Jake")
 print(jake_votes)
 ```
 
----
+<br>
 
 ## Sorting Lists I
 
@@ -1548,7 +1719,7 @@ Let’s see what happens when we apply .sort():
 names.sort()
 print(names)
 
-# Would output:
+# output:
 ['Angel', 'Buffy', 'Giles', 'Willow', 'Xander']
 ```
 
@@ -1560,11 +1731,11 @@ As we can see, the .sort() method sorted our list of names in alphabetical order
 names.sort(reverse=True)
 print(names)
 
-# Would output:
+# output:
 ['Xander', 'Willow', 'Giles', 'Buffy', 'Angel']
 ```
 
-:memo: Note: The .sort() method does not return any value and thus does not need to be assigned to a variable since it modifies the list directly. If we do assign the result of the method, it would assign the value of None to the variable.
+Note: The .sort() method does not return any value and thus does not need to be assigned to a variable since it modifies the list directly. If we do assign the result of the method, it would assign the value of None to the variable.
 
 To reverse a list using .sort(), add an optional input keyword argument and assign it the value of True.
 list.sort(reverse=True)
@@ -1572,17 +1743,27 @@ list.sort(reverse=True)
 
 Let’s experiment sorting various lists!
 
-Instructions
+### Instructions
 
-1. Use .sort() to sort addresses.
+1.
 
-2. Use print() to see how addresses changed.
+Use .sort() to sort addresses.
 
-3. Remove the # and whitespace in front of the line sort(names). Edit this line so that it runs without producing a NameError.
+2.
 
-4. Use print to examine sorted_cities. Why is it not the sorted version of cities?
+Use print() to see how addresses changed.
 
-5. Edit the .sort() call on cities such that it sorts the cities in reverse order (descending).
+3.
+
+Remove the # and whitespace in front of the line sort(names). Edit this line so that it runs without producing a NameError.
+
+4.
+
+Use print to examine sorted_cities. Why is it not the sorted version of cities?
+
+5.
+
+Edit the .sort() call on cities such that it sorts the cities in reverse order (descending).
 
 Print cities to see the result.
 
@@ -1590,9 +1771,11 @@ Print cities to see the result.
 # Checkpoint 1 & 2
 addresses = ["221 B Baker St.", "42 Wallaby Way", "12 Grimmauld Place", "742 Evergreen Terrace", "1600 Pennsylvania Ave", "10 Downing St."]
 
+
 # Checkpoint 3
 names = ["Ron", "Hermione", "Harry", "Albus", "Sirius"]
 names.sort()
+
 
 # Checkpoint 4 & 5
 cities = ["London", "Paris", "Rome", "Los Angeles", "New York"]
@@ -1616,7 +1799,7 @@ The sorted() function is different from the .sort() method in two ways:
 
 Let’s return to our list of names:
 
-```
+```py
 names = ["Xander", "Buffy", "Angel", "Willow", "Giles"]
 ```
 
@@ -1625,11 +1808,8 @@ Using sorted(), we can create a new list, called sorted_names:
 ```py
 sorted_names = sorted(names)
 print(sorted_names)
-```
 
-This yields the list sorted alphabetically:
-
-```
+# This yields the list sorted alphabetically:
 ['Angel', 'Buffy', 'Giles', 'Willow', 'Xander']
 ```
 
@@ -1637,16 +1817,19 @@ Note that using sorted did not change names:
 
 ```py
 print(names)
-
-# Would output:
+#output:
 ['Xander', 'Buffy', 'Angel', 'Willow', 'Giles']
 ```
 
-Instructions
+### Instructions
 
-1. Use sorted() to order games and create a new list called games_sorted.
+1.
 
-2. Print both games and games_sorted. How are they different?
+Use sorted() to order games and create a new list called games_sorted.
+
+2.
+
+Print both games and games_sorted. How are they different?
 
 ```py
 games = ["Portal", "Minecraft", "Pacman", "Tetris", "The Sims", "Pokemon"]
@@ -1666,13 +1849,13 @@ print(games_sorted)
 
 In this lesson, we learned how to:
 
-    Add elements to a list by index using the .insert() method.
-    Remove elements from a list by index using the .pop() method.
-    Generate a list using the range() function.
-    Get the length of a list using the len() function.
-    Select portions of a list using slicing syntax.
-    Count the number of times that an element appears in a list using the .count() method.
-    Sort a list of items using either the .sort() method or sorted() function.
+- Add elements to a list by index using the .insert() method.
+- Remove elements from a list by index using the .pop() method.
+- Generate a list using the range() function.
+- Get the length of a list using the len() function.
+- Select portions of a list using slicing syntax.
+- Count the number of times that an element appears in a list using the .count() method.
+- Sort a list of items using either the .sort() method or sorted() function.
 
 
 Since lists in Python of zero_indexed, the 5th element will be at index 4.
@@ -1681,30 +1864,54 @@ Use the .pop() method to remove elements from a list by index.
 
 As you go through the exercises, feel free to use print() to see changes when not explicitly asked to do so.
 
-Instructions
+### Instructions
 
-1. Our friend Jiho has been so successful in both the flower and grocery business that she has decided to open a furniture store.       
-Jiho has compiled a list of inventory items into a list called inventory and wants to know a few facts about it.        
-First, how many items are in the warehouse?     
+1.
+
+Our friend Jiho has been so successful in both the flower and grocery business that she has decided to open a furniture store.
+
+Jiho has compiled a list of inventory items into a list called inventory and wants to know a few facts about it.
+
+First, how many items are in the warehouse?
+
 Save the answer to a variable called inventory_len.
 
-2. Select the first element in inventory. Save it to a variable called first.
+2.
 
-3. Select the last element from inventory. Save it to a variable called last.
+Select the first element in inventory. Save it to a variable called first.
 
-4. Select items from the inventory starting at index 2 and up to, but not including, index 6.       
+3.
+
+Select the last element from inventory. Save it to a variable called last.
+
+4.
+
+Select items from the inventory starting at index 2 and up to, but not including, index 6.
+
 Save your answer to a variable called inventory_2_6.
 
-5. Select the first 3 items of inventory. Save it to a variable called first_3.
+5.
 
-6. How many 'twin bed's are in inventory? Save your answer to a variable called twin_beds.
+Select the first 3 items of inventory. Save it to a variable called first_3.
 
-7. Remove the 5th element in the inventory. Save the value to a variable called removed_item.
+6.
 
-8. There was a new item added to our inventory called "19th Century Bed Frame".     
+How many 'twin bed's are in inventory? Save your answer to a variable called twin_beds.
+
+7.
+
+Remove the 5th element in the inventory. Save the value to a variable called removed_item.
+
+8.
+
+There was a new item added to our inventory called "19th Century Bed Frame".
+
 Use the .insert() method to place the new item as the 11th element in our inventory.
 
-9. Sort inventory using the .sort() method or the sorted() function.        
+9.
+
+Sort inventory using the .sort() method or the sorted() function.
+
 Print inventory to see the result.
 
 ```py
@@ -1722,155 +1929,14 @@ inventory.insert(10, "19th Century Bed Frame")
 inventory.sort()
 # or this: sorted(inventory)
 print(inventory)
+
 ```
+
+<br>
 
 ---
 
-### Challenge - Len's Slice
+## Tuples
 
-You work at Len’s Slice, a new pizza joint in the neighborhood. You are going to use your knowledge of Python lists to organize some of your sales data.
 
-Make Some Pizzas
-
-1.
-
-To keep track of the kinds of pizzas you sell, create a list called toppings that holds the following:
-
-    "pepperoni"
-    "pineapple"
-    "cheese"
-    "sausage"
-    "olives"
-    "anchovies"
-    "mushrooms"
-
-2.
-
-To keep track of how much each kind of pizza slice costs, create a list called prices that holds the following integer values:
-
-    2
-    6
-    1
-    3
-    2
-    7
-    2
-
-3.
-
-Your boss wants you to do some research on $2 slices.
-
-Count the number of occurrences of 2 in the prices list, and store the result in a variable called num_two_dollar_slices. Print it out.
-
-4.
-
-Find the length of the toppings list and store it in a variable called num_pizzas.
-
-5.
-
-Print the string We sell [num_pizzas] different kinds of pizza!, where [num_pizzas] represents the value of our variable num_pizzas.
-
-6.
-
-Convert our toppings and prices lists into a two-dimensional list called pizza_and_prices that has the following associated values.
-
-Each sublist in pizza_and_prices should have one pizza topping and an associated price.
-Price 	Topping
-2 	"pepperoni"
-6 	"pineapple"
-1 	"cheese"
-3 	"sausage"
-2 	"olives"
-7 	"anchovies"
-2 	"mushrooms"
-
-For this project make sure the prices come before the topping name like so:
-
-```
-[price, topping_name]
-```
-
-7.
-
-Print pizza_and_prices.
-
-Does it look the way you expect?        
-Sorting and Slicing Pizzas
-
-8.
-
-Sort pizza_and_prices so that the pizzas are in the order of increasing price (ascending).
-
-9.
-
-Store the first element of pizza_and_prices in a variable called cheapest_pizza.
-
-10.
-
-A man walks into the pizza store and shouts “I will have your MOST EXPENSIVE pizza!”
-
-Get the last item of the pizza_and_prices list and store it in a variable called priciest_pizza.
-
-11.
-
-It looks like that was our last "anchovies" slice. Remove it from our pizza_and_prices list.
-
-12.
-
-Since there is no longer an "anchovies" pizza, you want to add a new topping called "peppers" to keep your customers excited about new toppings. Here is what your new topping looks like:
-
-```
-[2.5, "peppers"]
-```
-
-Add the new peppers pizza topping to our list pizza_and_prices.
-
-Note: Make sure to position it relative to the rest of the sorted data in pizza_and_prices, otherwise our data will not be correctly sorted anymore!
-
-13.
-
-Three mice walk into the store. They don’t have much money (they’re mice), but they do each want different pizzas.
-
-Slice the pizza_and_prices list and store the 3 lowest cost pizzas in a list called three_cheapest.
-
-14.
-
-Great job! The mice are very pleased and will be leaving you a 5-star review.
-
-Print the three_cheapest list.
-
-```py
-# Your code below:
-toppings = [
-    "pepperoni"
-    "pineapple"
-    "cheese"
-    "sausage"
-    "olives"
-    "anchovies"
-    "mushrooms"
-]
-prices = [2, 6, 1, 3, 2, 7, 2]
-num_two_dollar_slices = prices[2]
-num_pizzas = len(toppings)
-print("We sell", num_pizzas, "different kinds of pizza!")
-
-pizza_and_prices = [
-  [2, "pepperoni"], 
-  [6, "pineapple"],
-  [1, "cheese"],
-  [3, "sausage"],
-  [2, "olives"],
-  [7, "anchovies"],
-  [2, "mushrooms"]
-]
-print(pizza_and_prices)
-pizza_and_prices.sort()
-cheapest_pizza = pizza_and_prices[0]
-priciest_pizza = pizza_and_prices[-1]
-pizza_and_prices.pop(5)
-pizza_and_prices = pizza_and_prices + [2.5, "peppers"]
-
-print(pizza_and_prices)
-```
-
+https://www.youtube.com/watch?v=yDvRR8nWMNI&feature=emb_imp_woyt
